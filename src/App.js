@@ -1,18 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import * as React from "react";
 
-function App() {
+export default function Counter() {
+  const [count, setCount] = React.useState(0);
+
+  const handleClick = () => setCount(count + 3);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <p>Learn React - Let's GOOOOO!</p>
-      </header>
+    <div class="wrapper">
+      <button onClick={handleClick}>
+        {count}
+      </button>
     </div>
-  );
+  )
 }
-
-export default App;
