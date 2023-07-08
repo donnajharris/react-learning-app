@@ -1,0 +1,4 @@
+# Exclude development-specific files and directories
+node_modules/
+.git/
+.env
