@@ -1,6 +1,8 @@
-const ResetButton  = ()  => {
+const ResetButton  = ({onReset})  => {
     return ( 
-        <button className="reset">Reset</button>
+        <button className="reset" onClick={onReset}>
+            Reset
+        </button>
     );
 };
 

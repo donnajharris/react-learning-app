@@ -1,9 +1,4 @@
-import { useState } from "react";
-
-
-const CounterButton = () => {
-
-    const [count, setCount] = useState(0);
+const CounterButton = ({count, setCount}) => {
 
     const handleClick = () => {
       setCount(prevCount => prevCount + 1);
