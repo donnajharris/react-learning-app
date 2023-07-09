@@ -1,16 +1,16 @@
-import "./App.css";
-import * as React from "react";
+import './App.css';
+import React from "react";
+import CounterButton from "./CounterButton";
+import ResetButton from './ResetButton';
 
-export default function Counter() {
-  const [count, setCount] = React.useState(0);
-
-  const handleClick = () => setCount(count + 3);
+const App = () => {
 
   return (
     <div class="wrapper">
-      <button onClick={handleClick}>
-        {count}
-      </button>
+      <CounterButton />
+      <ResetButton />
     </div>
-  )
-}
+  );
+};
+
+export default App;
