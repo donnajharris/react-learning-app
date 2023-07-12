@@ -26,9 +26,7 @@ const App = () => {
 
   /* exercise 2 */
   return (
-    <div>
       <Todo />
-    </div>
   );
   
 };

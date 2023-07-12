@@ -36,13 +36,17 @@ button:hover {
 
 /* exercise 2 */
 
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
 body {
     margin: 0;
     padding: 0;
     min-height: 100vh;
     background: black;
     color: beige;
-    font-size: 22px;
+    font-size: 16px;
     font-family: "Verdana", sans-serif;
     letter-spacing: 3px;
     display: grid;
@@ -50,12 +54,39 @@ body {
     padding: 24px;
 }
 
+#root {
+    margin: 0 auto;
+    width: 80%;
+    max-width: 500px;
+}
+
+#root {
+    display: grid;
+    place-items: center;
+    padding: 24px;
+}
+
+
+#root > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    line-height: 1;
+    font-size: 16px;
+    background-color: darkslategray;
+    padding: 16px;
+    border-radius: 8px;
+    width: 100%;
+}
 
 label {
     display: flex;
     align-items: center;
     cursor: pointer;
     width: 100%;
+    gap: 16px;
+    line-height: 22px;
 }
 
 label > div {
@@ -69,25 +100,14 @@ label > div > input[type="checkbox"] {
     visibility: hidden;
 }
 
+input {
+    letter-spacing: 3px;
+}
+
 input:not([type="range"]):not([type="color"]) {
     writing-mode: horizontal-tb !important;
 }
 
-input {
-    /* display: inline-block; */
-    width: 200px;
-    font-size: 30px;
-}
-
-/* input[type="checkbox" i] {
-    background-color: initial;
-    cursor: default;
-    appearance: auto;
-    box-sizing: border-box;
-    margin: 3px 3px 3px 4px;
-    padding: initial;
-    border: initial;
-} */
 
 label:has(input:checked) > span {
     text-decoration: line-through;
@@ -100,13 +120,11 @@ label > div > span {
     border: 1px solid bisque;
     border-radius: 50%;
     cursor: pointer;
-    left: 158px; /* Adjust the left property to control spacing */
     position: absolute;
     top: -2;
     width: 24px;
     height: 24px;
   }
-  
 
   label > div > input:checked + span {
     background-color: green;
@@ -126,3 +144,16 @@ label > div > span {
     width: 12px;
     background-color: green;
   }
+
+  button {
+    background: none;
+    border: none;
+    color: goldenrod;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 0;
+    text-transform: none;
+    text-decoration: underline;
+    white-space: nowrap;
+}
