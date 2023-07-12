@@ -100,8 +100,22 @@ label > div > input[type="checkbox"] {
     visibility: hidden;
 }
 
-input {
-    letter-spacing: 3px;
+input[type="text"] {
+    appearance: none;
+    background-color: rgba(0, 0, 0, 0.1);
+    border: none;
+    color: beige;
+    outline: none;
+    font-size: 16px;
+    line-height: 1;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-style: italic;
+    padding-left: 8px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-radius: 4px;
 }
 
 input:not([type="range"]):not([type="color"]) {
