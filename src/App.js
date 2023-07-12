@@ -5,7 +5,7 @@ import './App.css';
 // import ResetButton from './ResetButton';
 
 /*exercise 2 */
-import Todo from './Todo';
+import TodoList from './TodoList';
 
 const App = () => {
 
@@ -26,7 +26,7 @@ const App = () => {
 
   /* exercise 2 */
   return (
-      <Todo />
+      <TodoList />
   );
   
 };

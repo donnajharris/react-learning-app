@@ -67,7 +67,7 @@ body {
 }
 
 
-#root > div {
+li, #root > div {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -156,4 +156,14 @@ label > div > span {
     text-transform: none;
     text-decoration: underline;
     white-space: nowrap;
+}
+
+ul {
+    padding-top: 120px;
+    display: grid;
+    gap: 16px;
+    margin: 0;
+    width: 100%;
+    max-width: 400px;
+    padding: 24px;
 }
