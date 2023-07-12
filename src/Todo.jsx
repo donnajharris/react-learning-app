@@ -3,7 +3,7 @@
 import * as React from "react"
 
 
-export default function Todo ({todo, handleUpdateTodo}) {
+export default function Todo ({todo, handleUpdateTodo, handleDeleteTodo}) {
 
     // const [completed, setCompleted] = React.useState(false)
     const [editing, setEditing] = React.useState(false)
@@ -15,6 +15,7 @@ export default function Todo ({todo, handleUpdateTodo}) {
       })
 
     const handleEditClick = () => setEditing(!editing)
+    const handleDeleteClick = () => handleDeleteTodo(todo.id)
 
     const handleEditTodo = (e) => handleUpdateTodo({
         ...todo,
@@ -43,9 +44,16 @@ export default function Todo ({todo, handleUpdateTodo}) {
                     <span>{todo.label}</span>
                 )}
             </label>
-            <button onClick={handleEditClick}>
-                {editing ? "Save" : "Edit"}
-            </button>
+            <div>
+                <button onClick={handleEditClick}>
+                    {editing ? "Save" : "Edit"}
+                </button>
+                {!editing && (
+                    <button onClick={handleDeleteClick}>
+                        Delete
+                    </button>
+                )}
+            </div>
         </li>
     )
 }

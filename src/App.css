@@ -158,6 +158,11 @@ label > div > span {
     white-space: nowrap;
 }
 
+ul > li > div {
+    display: flex;
+    gap: 8px;
+}
+
 ul {
     padding-top: 120px;
     display: grid;
