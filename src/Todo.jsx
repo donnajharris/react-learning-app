@@ -34,6 +34,7 @@ export default function Todo ({todo, handleUpdateTodo, handleDeleteTodo}) {
                         type="text"
                         value={todo.label}
                         onChange={handleEditTodo}
+                        data-testid={"todo-input"}
                     />
                     ) : (
                     <span>{todo.label}</span>
