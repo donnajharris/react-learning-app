@@ -1,13 +1,8 @@
-/* exercise 2 */
-
 import * as React from "react"
-
 
 export default function Todo ({todo, handleUpdateTodo, handleDeleteTodo}) {
 
-    // const [completed, setCompleted] = React.useState(false)
     const [editing, setEditing] = React.useState(false)
-
 
     const handleCheckboxClick = () => handleUpdateTodo({
         ...todo,
